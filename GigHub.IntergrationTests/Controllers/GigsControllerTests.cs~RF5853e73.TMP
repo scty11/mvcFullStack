@@ -1,0 +1,26 @@
+﻿using System;
+using GigHub.Controllers;
+using GigHub.Persistence;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Framework.Internal;
+
+namespace GigHub.IntergrationTests.Controllers
+{
+    [TestFixture]
+    public class GigsControllerTests
+    {
+        private GigsController _controller;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _controller = new GigsController(new UnitOfWork(new ApplicationDbContext()));
+        }
+
+        [Test]
+        public void Mine_WhenCalled_shouldReturnUpComingGigs()
+        {
+        }
+    }
+}
